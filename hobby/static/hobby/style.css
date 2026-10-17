@@ -1,0 +1,110 @@
+
+/* Ustawienia podstawowe */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #243247;
+    background: #f1f5f9;
+}
+
+/* Nagłówek */
+header {
+    background: #12304a;
+    color: white;
+    padding: 28px 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0 0 16px;
+    font-size: 2.2rem;
+}
+
+/* Nawigacja z Flexbox */
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    background: #245477;
+    transition: background 0.2s ease;
+}
+
+nav a:hover {
+    background: #367eaa;
+}
+
+/* Główna zawartość */
+main {
+    max-width: 1000px;
+    min-height: 55vh;
+    margin: 32px auto;
+    padding: 30px;
+    background: white;
+    border-radius: 14px;
+    box-shadow: 0 4px 16px rgba(20, 40, 60, 0.08);
+}
+
+h2 {
+    color: #126782;
+    margin-top: 0;
+}
+
+p {
+    font-size: 1.05rem;
+}
+
+/* Karty w galerii */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.gallery-item {
+    flex: 1 1 220px;
+    padding: 20px;
+    background: #e8f4f8;
+    border-left: 4px solid #1683a5;
+    border-radius: 8px;
+}
+
+/* Stopka */
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #526477;
+}
+
+/* Widok mobilny */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 1.7rem;
+    }
+
+    main {
+        margin: 16px;
+        padding: 20px;
+    }
+
+    nav {
+        flex-direction: column;
+    }
+
+    nav a {
+        width: 100%;
+    }
+}
