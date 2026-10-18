@@ -1,30 +1,41 @@
-
+{% load static %}
 <!DOCTYPE html>
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	{% load static %}
-	<link rel="stylesheet" href="{% static 'hobby/style.css' %}">
-    <title>{% block title %}Moje hobby{% endblock %}</title>
+    <meta name="description" content="Moja strona o programowaniu, informatyce i nowych technologiach.">
+    <title>{% block title %}Moje hobby | Programowanie{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'hobby/style.css' %}">
 </head>
 <body>
-    <header>
-        <h1>Moje hobby</h1>
-        <nav>
-            <a href="/">Start</a>
-            <a href="/about/">O hobby</a>
-            <a href="/gallery/">Galeria</a>
-        </nav>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="brand" href="{% url 'home' %}">
+                <span class="brand-icon">&lt;/&gt;</span>
+                <span>Moje<span class="accent">Hobby</span></span>
+            </a>
+
+            <nav class="navigation">
+                <a href="{% url 'home' %}">Strona główna</a>
+                <a href="{% url 'about' %}">O mnie</a>
+                <a href="{% url 'gallery' %}">Moje zainteresowania</a>
+            </nav>
+        </div>
     </header>
 
     <main>
-        {% block content %}
-        {% endblock %}
+        {% block content %}{% endblock %}
     </main>
 
-    <footer>
-        <p>Moja strona o hobby</p>
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <div>
+                <strong>MojeHobby</strong>
+                <p>Programowanie, informatyka i ciągły rozwój.</p>
+            </div>
+            <p class="copyright">Projekt edukacyjny Django · 2026</p>
+        </div>
     </footer>
 </body>
 </html>

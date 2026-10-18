@@ -1,10 +1,104 @@
 
 {% extends "hobby/base.html" %}
 
-{% block title %}Strona główna - Moje hobby{% endblock %}
+{% block title %}Strona główna | MojeHobby{% endblock %}
 
 {% block content %}
-    <h2>Witaj na mojej stronie!</h2>
-    <p>Moje hobby to {{ hobby_name }}.</p>
-    <p>{{ description }}</p>
+
+<section class="hero">
+    <div class="container hero-grid">
+        <div class="hero-content">
+            <span class="eyebrow">MOJE ZAINTERESOWANIA</span>
+            <h1>Tworzę, uczę się i odkrywam świat <span class="accent">technologii.</span></h1>
+            <p class="hero-description">
+                Cześć! Interesuję się programowaniem, informatyką i nowymi
+                technologiami. Lubię poznawać nowe narzędzia, rozwiązywać
+                problemy i zamieniać pomysły w działające projekty.
+            </p>
+
+            <div class="hero-actions">
+                <a class="button button-primary" href="{% url 'gallery' %}">
+                    Poznaj moje zainteresowania →
+                </a>
+                <a class="button button-secondary" href="{% url 'about' %}">
+                    Dowiedz się więcej
+                </a>
+            </div>
+
+            <div class="hero-note">
+                <span class="status-dot"></span>
+                Ciągle rozwijam swoje umiejętności
+            </div>
+        </div>
+
+        <div class="code-window">
+            <div class="window-bar">
+                <div class="window-dots"><span></span><span></span><span></span></div>
+                <span>moj_projekt.py</span>
+            </div>
+            <div class="code-content">
+                <p class="code-muted"># Mój sposób na rozwój</p>
+                <p><span class="code-purple">def</span> <span class="code-yellow">rozwijaj_sie</span>():</p>
+                <p class="code-indent">zainteresowanie = <span class="code-green">"programowanie"</span></p>
+                <p class="code-indent">nauka = <span class="code-green">"każdego dnia"</span></p>
+                <p class="code-indent"><span class="code-purple">return</span> <span class="code-green">"nowe możliwości"</span></p>
+                <br>
+                <p><span class="code-comment"># Rezultat?</span></p>
+                <p>więcej wiedzy<span class="code-cursor">_</span></p>
+            </div>
+            <div class="code-footer">
+                <span>● Python</span>
+                <span>Projektowanie · Nauka · Rozwój</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <div class="section-heading">
+            <span class="eyebrow">CO MNIE INTERESUJE</span>
+            <h2>Technologie, które poznaję</h2>
+            <p>Programowanie to nie tylko pisanie kodu. To również kreatywność, logika i ciągłe szukanie nowych rozwiązań.</p>
+        </div>
+
+        <div class="card-grid">
+            <article class="info-card">
+                <div class="card-icon">01</div>
+                <h3>Tworzenie stron</h3>
+                <p>Poznawanie HTML, CSS i Django oraz budowanie stron, które są czytelne, estetyczne i wygodne w obsłudze.</p>
+                <span class="tag">Web development</span>
+            </article>
+
+            <article class="info-card">
+                <div class="card-icon">02</div>
+                <h3>Programowanie</h3>
+                <p>Rozwijanie logicznego myślenia, poznawanie Pythona i szukanie sposobów na rozwiązywanie problemów za pomocą kodu.</p>
+                <span class="tag">Python</span>
+            </article>
+
+            <article class="info-card">
+                <div class="card-icon">03</div>
+                <h3>Nowe technologie</h3>
+                <p>Odkrywanie narzędzi informatycznych, poznawanie nowych rozwiązań i sprawdzanie, jak działają systemy komputerowe.</p>
+                <span class="tag">IT & technologie</span>
+            </article>
+        </div>
+    </div>
+</section>
+
+<section class="learning-section">
+    <div class="container learning-grid">
+        <div>
+            <span class="eyebrow">MÓJ ROZWÓJ</span>
+            <h2>Małe kroki prowadzą do dużych projektów.</h2>
+        </div>
+        <div>
+            <p>Każdy projekt to okazja do zdobycia nowych umiejętności. Czasami trzeba znaleźć błąd, czasami nauczyć się nowej funkcji, a czasami zacząć od początku.</p>
+            <p>Najważniejsze jest dla mnie praktyczne poznawanie technologii i stopniowe rozwijanie własnych możliwości.</p>
+            <a class="text-link" href="{% url 'about' %}">Poznaj mnie lepiej →</a>
+        </div>
+    </div>
+</section>
+
 {% endblock %}
